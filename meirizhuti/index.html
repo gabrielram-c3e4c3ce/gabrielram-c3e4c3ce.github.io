@@ -1,0 +1,1445 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>每日主题大赛mrds-每日主题大赛创意方向_每日主题大赛参赛指南_每日主题大赛和常规赛区别</title>
+  <meta name="description" content="每日主题大赛mrds提供每日主题大赛的创意方向、参赛指南与赛事对比，涵盖悬疑推理、都市情感、科幻设定等热门类型，适合短篇创作者与灵感收集者每日查阅。">
+  <meta name="keywords" content="每日主题大赛创意方向,短篇主题赛参赛指南,悬疑推理主题赛,都市情感设定,赛事对比分析">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231a2e4b'/%3E%3Cpath d='M16 6l9 14h-18z' fill='%23f5b042'/%3E%3Ccircle cx='16' cy='23' r='3' fill='%23ffffff'/%3E%3C/svg%3E">
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --ink: #1a2e4b;
+      --ink-light: #2d4668;
+      --accent: #f5b042;
+      --accent-soft: #fef4e3;
+      --bg: #f8f7f4;
+      --surface: #ffffff;
+      --border: #e2dfd8;
+      --text: #22303f;
+      --text-muted: #5e6b7a;
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.03);
+      --shadow-md: 0 6px 18px rgba(0, 0, 0, 0.06);
+      --font-sans: -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --header-height: 112px;
+      --announce-height: 38px;
+      --scroll-offset: calc(var(--header-height) + var(--announce-height) + 12px);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding-top: calc(var(--announce-height) + var(--header-height));
+    }
+
+    /* 吸顶公告条 + 页头 */
+    .sticky-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: var(--surface);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .announce-bar {
+      background: var(--ink);
+      color: #fff;
+      font-size: 13px;
+      height: var(--announce-height);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 0.3px;
+      padding: 0 16px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .announce-bar .tag {
+      background: var(--accent);
+      color: var(--ink);
+      font-weight: 600;
+      padding: 2px 10px;
+      border-radius: 40px;
+      font-size: 11px;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+
+    .page-header {
+      height: var(--header-height);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 24px;
+      background: var(--surface);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .brand svg {
+      width: 38px;
+      height: 38px;
+    }
+
+    .brand-text {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.3px;
+    }
+
+    .header-nav {
+      display: flex;
+      gap: 20px;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--ink-light);
+    }
+
+    .header-nav a {
+      text-decoration: none;
+      color: inherit;
+      padding: 6px 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .header-nav a:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .search-input {
+      border: 1px solid var(--border);
+      border-radius: 40px;
+      padding: 8px 16px;
+      font-size: 14px;
+      width: 200px;
+      background: var(--bg);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: var(--accent);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--border);
+      padding: 8px 18px;
+      border-radius: 40px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ink);
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn-outline:hover {
+      background: var(--accent-soft);
+    }
+
+    /* 主容器 */
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* 首屏 */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 36px 0 28px;
+      flex-wrap: wrap;
+    }
+
+    .hero-content {
+      flex: 1 1 480px;
+    }
+
+    .hero-content h1 {
+      font-size: 40px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: var(--ink);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .hero-desc {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 620px;
+      margin-bottom: 24px;
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-size: 14px;
+      color: var(--ink-light);
+      margin-bottom: 28px;
+    }
+
+    .hero-meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hero-meta .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: inline-block;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--ink);
+      color: #fff;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: #0f1f33;
+    }
+
+    .hero-visual {
+      flex: 0 0 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 三栏布局 */
+    .main-layout {
+      display: flex;
+      gap: 28px;
+      margin: 24px 0 48px;
+      align-items: flex-start;
+    }
+
+    .left-sidebar {
+      flex: 0 0 180px;
+      position: sticky;
+      top: var(--scroll-offset);
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      padding: 18px 12px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+    }
+
+    .left-sidebar .channel-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      padding-left: 6px;
+    }
+
+    .channel-nav {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .channel-nav a {
+      display: block;
+      padding: 8px 10px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      color: var(--ink-light);
+      font-size: 14px;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    .channel-nav a:hover {
+      background: var(--accent-soft);
+      color: var(--ink);
+    }
+
+    .channel-nav .active {
+      background: var(--accent-soft);
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .main-content {
+      flex: 1 1 720px;
+      min-width: 0;
+    }
+
+    .right-sidebar {
+      flex: 0 0 250px;
+      position: sticky;
+      top: var(--scroll-offset);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .sidebar-card {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .sidebar-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .toc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 13px;
+    }
+
+    .toc-list a {
+      text-decoration: none;
+      color: var(--text-muted);
+      display: block;
+      padding: 4px 0;
+      border-left: 2px solid transparent;
+      padding-left: 8px;
+      transition: all 0.2s;
+    }
+
+    .toc-list a:hover {
+      color: var(--ink);
+      border-left-color: var(--accent);
+    }
+
+    .hot-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 13px;
+    }
+
+    .hot-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 0;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .hot-list li:last-child {
+      border-bottom: none;
+    }
+
+    .hot-list a {
+      text-decoration: none;
+      color: var(--ink-light);
+      font-weight: 500;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .hot-list .badge {
+      background: var(--accent-soft);
+      color: var(--ink);
+      padding: 1px 8px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    /* 通用板块样式 */
+    .section {
+      margin-bottom: 38px;
+      scroll-margin-top: var(--scroll-offset);
+    }
+
+    .section-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-title::before {
+      content: '';
+      display: inline-block;
+      width: 5px;
+      height: 24px;
+      background: var(--accent);
+      border-radius: 4px;
+    }
+
+    .section-sub {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.15s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .card h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .tag-sm {
+      background: var(--bg);
+      padding: 2px 10px;
+      border-radius: 40px;
+      font-size: 11px;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      padding-top: 10px;
+    }
+
+    .list-compact {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .list-compact li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+
+    .list-compact li:last-child {
+      border-bottom: none;
+    }
+
+    .list-compact .item-name {
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .list-compact .item-desc {
+      color: var(--text-muted);
+      font-size: 13px;
+      flex: 1;
+      margin-left: 16px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .list-compact .item-time {
+      color: var(--text-muted);
+      font-size: 12px;
+      flex-shrink: 0;
+      margin-left: 16px;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    .category-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px 12px;
+      text-align: center;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.2s;
+    }
+
+    .category-item:hover {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+    }
+
+    .deep-text h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 24px 0 10px;
+    }
+
+    .deep-text h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .deep-text p {
+      margin-bottom: 14px;
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    .deep-text ul {
+      margin: 10px 0 18px 20px;
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    .deep-text li {
+      margin-bottom: 6px;
+    }
+
+    .guide-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      counter-reset: step;
+    }
+
+    .guide-step {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: var(--surface);
+      padding: 16px 18px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+    }
+
+    .guide-step::before {
+      counter-increment: step;
+      content: counter(step);
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      background: var(--accent-soft);
+      color: var(--ink);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .guide-step p {
+      font-size: 14px;
+      color: var(--text);
+      margin: 0;
+    }
+
+    .guide-step strong {
+      color: var(--ink);
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    details {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 4px 18px;
+      transition: background 0.2s;
+    }
+
+    details[open] {
+      background: var(--accent-soft);
+    }
+
+    summary {
+      font-weight: 600;
+      color: var(--ink);
+      padding: 12px 0;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 15px;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: '+';
+      font-size: 18px;
+      color: var(--text-muted);
+      transition: transform 0.2s;
+    }
+
+    details[open] summary::after {
+      content: '−';
+    }
+
+    details p {
+      padding: 0 0 16px;
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .comment-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+    }
+
+    .comment-item {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 14px;
+      font-size: 13px;
+    }
+
+    .comment-item .name {
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .comment-item .text {
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .news-item {
+      display: flex;
+      gap: 16px;
+      background: var(--surface);
+      padding: 14px 18px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+    }
+
+    .news-date {
+      flex-shrink: 0;
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .news-content h3 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .news-content p {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag-cloud a {
+      text-decoration: none;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-size: 13px;
+      color: var(--ink-light);
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .tag-cloud a:hover {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+    }
+
+    .quote-panel {
+      background: var(--ink);
+      color: #fff;
+      border-radius: var(--radius-md);
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .quote-panel .quote-text {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 1.6;
+      flex: 1 1 400px;
+    }
+
+    .quote-panel .quote-author {
+      font-size: 14px;
+      color: var(--accent);
+      text-align: right;
+      flex-shrink: 0;
+    }
+
+    /* 页尾 */
+    .page-footer {
+      background: var(--ink);
+      color: #b9c4d0;
+      padding: 40px 0 24px;
+      margin-top: 48px;
+    }
+
+    .footer-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+
+    .footer-brand .brand-text {
+      color: #fff;
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .footer-brand p {
+      font-size: 13px;
+      line-height: 1.6;
+      max-width: 280px;
+    }
+
+    .footer-group h4 {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .footer-group ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-group a {
+      color: #b9c4d0;
+      text-decoration: none;
+      font-size: 13px;
+      transition: color 0.2s;
+    }
+
+    .footer-group a:hover {
+      color: var(--accent);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 12px;
+    }
+
+    .sample-note {
+      font-size: 12px;
+      color: #7d8b9c;
+    }
+
+    /* 响应式 */
+    @media (max-width: 1100px) {
+      .main-layout {
+        flex-wrap: wrap;
+      }
+      .left-sidebar {
+        flex: 0 0 100%;
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 12px;
+      }
+      .channel-title {
+        display: none;
+      }
+      .channel-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .channel-nav a {
+        padding: 6px 14px;
+        font-size: 13px;
+        background: var(--bg);
+        border-radius: 40px;
+      }
+      .right-sidebar {
+        flex: 0 0 100%;
+        position: static;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .header-nav {
+        display: none;
+      }
+      .search-input {
+        width: 140px;
+      }
+    }
+
+    @media (max-width: 720px) {
+      body {
+        padding-top: calc(var(--announce-height) + 72px);
+        --header-height: 72px;
+        --scroll-offset: calc(var(--announce-height) + 72px + 12px);
+      }
+      .page-header {
+        height: 72px;
+        padding: 0 16px;
+      }
+      .brand-text {
+        font-size: 18px;
+      }
+      .hero-content h1 {
+        font-size: 28px;
+      }
+      .hero-visual {
+        display: none;
+      }
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+      .right-sidebar {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .search-input {
+        width: 100px;
+        font-size: 12px;
+      }
+      .btn-outline {
+        padding: 6px 12px;
+        font-size: 12px;
+      }
+      .list-compact li {
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+      .list-compact .item-desc {
+        margin-left: 0;
+        white-space: normal;
+        flex: 1 1 100%;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .container {
+        padding: 0 14px;
+      }
+      .hero-content h1 {
+        font-size: 24px;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* 搜索无结果 */
+    .no-result {
+      display: none;
+      text-align: center;
+      padding: 30px;
+      background: var(--surface);
+      border-radius: var(--radius-md);
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+
+    .no-result.show {
+      display: block;
+    }
+
+    .hidden-by-search {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 吸顶公告条 + 页头 -->
+<div class="sticky-wrapper">
+  <div class="announce-bar">
+    <span class="tag">上新</span>
+    ；“悬疑推理·密室谜题”主题赛今日开启，参赛通道已开放
+  </div>
+  <header class="page-header">
+    <div class="brand">
+      <svg viewBox="0 0 32 32" width="38" height="38">
+        <rect width="32" height="32" rx="8" fill="#1a2e4b"></rect>
+        <path d="M16 6l9 14h-18z" fill="#f5b042"></path>
+        <circle cx="16" cy="23" r="3" fill="#ffffff"></circle>
+      </svg>
+      <span class="brand-text">每日主题大赛mrds</span>
+    </div>
+    <nav class="header-nav">
+      <a href="/#intro">赛事简介</a>
+      <a href="/#hot">热门推荐</a>
+      <a href="/#latest">最新动态</a>
+      <a href="/#category">分类入口</a>
+      <a href="/#faq">常见问题</a>
+    </nav>
+    <div class="header-actions">
+      <input type="text" id="searchInput" class="search-input" placeholder="搜索主题或类型…" aria-label="搜索内容">
+      <button class="btn-outline" id="searchBtn" type="button">搜索</button>
+    </div>
+  </header>
+</div>
+
+<!-- 首屏 -->
+<div class="container">
+  <section class="hero">
+    <div class="hero-content">
+      <h1>每日主题大赛mrds</h1>
+      <p class="hero-desc">每天一个创意主题，聚焦短篇叙事与类型写作。从悬疑推理到都市情感，从科幻设定到历史传奇，为创作者提供可参赛的选题方向与灵感参考。</p>
+      <div class="hero-meta">
+        <span><span class="dot"></span> 每日 09:00 更新主题</span>
+        <span><span class="dot"></span> 已累计 240+ 期主题</span>
+        <span><span class="dot"></span> 参赛人数 1.8 万+</span>
+      </div>
+      <div class="hero-actions">
+        <button class="btn-primary" type="button">查看今日主题</button>
+        <button class="btn-outline" type="button">往期回顾</button>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <svg width="240" height="180" viewBox="0 0 240 180" fill="none">
+        <rect x="10" y="20" width="220" height="140" rx="16" fill="#fef4e3" stroke="#e2dfd8" stroke-width="1.5"></rect>
+        <path d="M60 80 L120 40 L180 80 L180 140 L60 140 Z" fill="#1a2e4b" opacity="0.08"></path>
+        <circle cx="120" cy="95" r="32" fill="#f5b042" opacity="0.3"></circle>
+        <path d="M120 63 L135 90 L105 90 Z" fill="#1a2e4b"></path>
+        <rect x="80" y="120" width="80" height="6" rx="3" fill="#e2dfd8"></rect>
+        <rect x="95" y="132" width="50" height="6" rx="3" fill="#e2dfd8"></rect>
+      </svg>
+    </div>
+  </section>
+
+  <!-- 三栏布局 -->
+  <div class="main-layout">
+    <!-- 左栏 -->
+    <aside class="left-sidebar" id="channel-nav">
+      <div class="channel-title">频道导航</div>
+      <ul class="channel-nav">
+        <li><a href="/#intro" class="active">内容简介</a></li>
+        <li><a href="/#hot">热门内容推荐</a></li>
+        <li><a href="/#latest">最新更新</a></li>
+        <li><a href="/#category">分类入口</a></li>
+        <li><a href="/#deep">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="/#comments">用户评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#related">相关推荐</a></li>
+        <li><a href="/#trend">趋势观察</a></li>
+      </ul>
+    </aside>
+
+    <!-- 中栏 -->
+    <main class="main-content">
+
+      <!-- 板块1：内容简介 -->
+      <section class="section" id="intro">
+        <h2 class="section-title">内容简介 · 每日主题大赛mrds</h2>
+        <div class="deep-text">
+          <p>每日主题大赛mrds是一个聚焦短篇叙事与类型写作的每日主题赛事平台。每天上午九点，系统会发布一个具体的创作主题，例如“密室中的第二把钥匙”“末班地铁的乘客”“旧照片背后的第三个人”，参赛者需围绕该主题在限定字数内完成一篇完整故事。平台以“低门槛、高频率、强命题”为特色，吸引大量悬疑推理、都市情感、科幻设定与历史传奇方向的写作者参与。</p>
+          <p>对于习惯在通勤路上构思、睡前伏案写作的创作者来说，每日主题大赛mrds提供了明确的创作节奏。参赛者可以在当天任何时段提交作品，所有稿件由读者评分与编辑初筛共同决定是否进入精选。每期主题的创意方向不同，但都要求故事具备完整起承转合，这使得参赛作品普遍偏向强情节与高概念。</p>
+          <p>平台目前设有悬疑推理、都市情感、科幻设定、历史传奇、奇幻冒险五个常设分类，每期主题会归入其中一个分类，并在分类页保留往期可读作品。参赛指南中明确说明：每位作者每日可提交一篇作品，字数建议在800至3000字之间。对于想要练习短篇叙事节奏的写作者，每日主题大赛mrds的往期主题列表是很好的命题练习素材库。</p>
+          <p>读者端方面，每日主题大赛mrds提供按日期浏览、按分类筛选、按热度排序三种阅读路径。如果你在寻找“适合睡前看的短篇悬疑故事”或“十分钟能读完的都市情感片段”，平台的精选合集与专题入口可以直接定位。赛事也鼓励读者在作品下留下具体评论，而非简单点赞。</p>
+        </div>
+      </section>
+
+      <!-- 板块2：热门内容推荐 -->
+      <section class="section" id="hot">
+        <h2 class="section-title">热门内容推荐 · 本周高评分主题作品</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>密室中的第二把钥匙</h3>
+            <div class="card-tags"><span class="tag-sm">悬疑推理</span><span class="tag-sm">密室谜题</span><span class="tag-sm">逻辑推演</span></div>
+            <p class="card-desc">一间上锁的书房，两把钥匙，死者手中却握着第三把。侦探必须在晚餐前指出真凶。</p>
+            <div class="card-meta"><span>热度 9.2</span><span>评分 4.8</span></div>
+          </article>
+          <article class="card">
+            <h3>末班地铁的乘客</h3>
+            <div class="card-tags"><span class="tag-sm">都市情感</span><span class="tag-sm">夜归故事</span><span class="tag-sm">治愈</span></div>
+            <p class="card-desc">末班地铁上只有三个人，每个都藏着一段不愿在阳光下讲述的往事。</p>
+            <div class="card-meta"><span>热度 8.7</span><span>评分 4.6</span></div>
+          </article>
+          <article class="card">
+            <h3>旧照片背后的第三个人</h3>
+            <div class="card-tags"><span class="tag-sm">悬疑推理</span><span class="tag-sm">家庭秘密</span><span class="tag-sm">反转</span></div>
+            <p class="card-desc">一张泛黄的合影里，本该只有父母和新娘，但相纸背面写着：“还有一个人在场”。</p>
+            <div class="card-meta"><span>热度 8.5</span><span>评分 4.7</span></div>
+          </article>
+          <article class="card">
+            <h3>时间修复师的最后一次委托</h3>
+            <div class="card-tags"><span class="tag-sm">科幻设定</span><span class="tag-sm">时间循环</span><span class="tag-sm">伦理困境</span></div>
+            <p class="card-desc">他修复了无数条时间线，却始终无法面对自己造成的那一次断裂。</p>
+            <div class="card-meta"><span>热度 9.0</span><span>评分 4.9</span></div>
+          </article>
+          <article class="card">
+            <h3>巷口面馆的最后一碗面</h3>
+            <div class="card-tags"><span class="tag-sm">都市情感</span><span class="tag-sm">市井烟火</span><span class="tag-sm">告别</span></div>
+            <p class="card-desc">老城区拆迁前夜，面馆老板给每位老客煮了同一碗面，味道却各不相同。</p>
+            <div class="card-meta"><span>热度 8.3</span><span>评分 4.5</span></div>
+          </article>
+          <article class="card">
+            <h3>将军的最后一封家书</h3>
+            <div class="card-tags"><span class="tag-sm">历史传奇</span><span class="tag-sm">战争背景</span><span class="tag-sm">家国抉择</span></div>
+            <p class="card-desc">城破前夜，将军在灯下写了三封内容完全不同的家书，托付给三个信使。</p>
+            <div class="card-meta"><span>热度 8.8</span><span>评分 4.6</span></div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 板块3：最新更新 -->
+      <section class="section" id="latest">
+        <h2 class="section-title">最新更新 · 今日与近三日主题</h2>
+        <ul class="list-compact">
+          <li><span class="item-name">今日主题：灯塔守望者的日志</span><span class="item-desc">要求以日记体讲述一个海上失踪事件，需包含至少一次反转。</span><span class="item-time">2025-04-10</span></li>
+          <li><span class="item-name">昨日主题：没有寄出的婚礼请柬</span><span class="item-desc">都市情感分类，聚焦未说出口的遗憾，字数建议1200以内。</span><span class="item-time">2025-04-09</span></li>
+          <li><span class="item-name">4月8日主题：平行世界的便利店</span><span class="item-desc">科幻设定，要求出现两种不同货币体系，故事需在店内完成。</span><span class="item-time">2025-04-08</span></li>
+          <li><span class="item-name">4月7日主题：宫墙外的说书人</span><span class="item-desc">历史传奇，说书人讲的故事正在现实中逐一应验。</span><span class="item-time">2025-04-07</span></li>
+          <li><span class="item-name">4月6日主题：凌晨三点的急诊室</span><span class="item-desc">都市情感，以医护人员视角展开，需出现一个无法治愈的病人。</span><span class="item-time">2025-04-06</span></li>
+          <li><span class="item-name">4月5日主题：被遗忘的密码本</span><span class="item-desc">悬疑推理，密码本指向一个三十年前的旧案，主角需在24小时内破译。</span><span class="item-time">2025-04-05</span></li>
+          <li><span class="item-name">4月4日主题：山神的赌约</span><span class="item-desc">奇幻冒险，凡人需与山神完成三局两胜的赌局，输者永远留在山中。</span><span class="item-time">2025-04-04</span></li>
+          <li><span class="item-name">4月3日主题：第二封辞职信</span><span class="item-desc">都市情感，主角写了两封辞职信，一封给老板，一封给十年前的自己。</span><span class="item-time">2025-04-03</span></li>
+        </ul>
+      </section>
+
+      <!-- 板块4：分类入口 -->
+      <section class="section" id="category">
+        <h2 class="section-title">分类入口 · 按主题类型查找</h2>
+        <div class="category-grid">
+          <a href="/#hot" class="category-item">悬疑推理</a>
+          <a href="/#hot" class="category-item">都市情感</a>
+          <a href="/#hot" class="category-item">科幻设定</a>
+          <a href="/#hot" class="category-item">历史传奇</a>
+          <a href="/#hot" class="category-item">奇幻冒险</a>
+          <a href="/#hot" class="category-item">密室谜题</a>
+          <a href="/#hot" class="category-item">时间循环</a>
+          <a href="/#hot" class="category-item">市井烟火</a>
+        </div>
+      </section>
+
+      <!-- 板块5：深度解析正文 -->
+      <section class="section" id="deep">
+        <h2 class="section-title">深度解析 · 命题写作的节奏与破题思路</h2>
+        <div class="deep-text">
+          <h3>一、为什么命题越具体，故事越容易成立</h3>
+          <p>每日主题大赛mrds的主题通常包含一个明确的时间点、地点或物件，例如“末班地铁”“第二把钥匙”“凌晨三点的急诊室”。这种具体性并非限制，而是帮助作者快速锁定场景与冲突。当主题给定一个物理空间，人物的行动就有了边界，故事的张力更容易在有限范围内累积。</p>
+          <p>对于习惯自由创作的人来说，具体命题反而能减少启动成本。你不需要先想“写什么”，而是直接进入“在这个场景里，谁遇到了什么问题”。参赛指南中建议：拿到主题后先写一句“某人必须在某时某地完成某事”，这句话往往就是故事的主轴。</p>
+
+          <h3>二、短篇叙事中的节奏分配</h3>
+          <p>每日主题大赛mrds建议字数在800至3000字之间，这意味着故事不能依赖长线铺垫。常见的节奏分配是：开头200字内建立场景与人物困境，中段用一次对话或一次发现推动转折，结尾在100字内完成收束。悬疑推理类尤其需要在前三分之一处抛出核心疑问，否则读者容易流失。</p>
+          <ul>
+            <li>开篇直接进入异常状态：有人死了、有人失踪、有人收到不该收到的信。</li>
+            <li>中段给读者一个可参与的推理线索，例如一个前后矛盾的证词。</li>
+            <li>结尾不必强行反转，但需回应开篇的异常状态，形成闭合。</li>
+          </ul>
+
+          <h3>三、不同类型方向的破题侧重</h3>
+          <p>都市情感类主题通常围绕关系中的未说出口的话，破题关键是找到一个具体的物件或场景承载情绪，比如一碗面、一张请柬、一封辞职信。科幻设定类则要求作者在开篇就明确规则，例如时间修复的代价、平行世界的货币差异，规则越清晰，后续冲突越可信。</p>
+          <p>历史传奇与奇幻冒险方向，每日主题大赛mrds的往期优秀作品显示：细节的真实感比宏大设定更能留住读者。一件兵器、一道菜肴、一句方言，往往比整段背景介绍更有效。参赛者如果对某个历史时期不熟悉，可以从日常器物入手，用具体物品构建时代感。</p>
+
+          <h3>四、读者评分与编辑初筛的差异</h3>
+          <p>平台采用读者评分与编辑初筛结合的方式。读者评分偏向故事的可读性与情感冲击，编辑初筛更关注结构完整度与主题契合度。这意味着一篇情感浓烈但结构松散的作品可能获得高读者分，却不一定进入精选；反之，一篇结构严谨但情感克制的作品可能在编辑处得分更高。参赛指南建议作者在提交前自问两个问题：故事是否完整？是否回应了主题中的具体元素？</p>
+        </div>
+      </section>
+
+      <!-- 板块6：体验指南 -->
+      <section class="section" id="guide">
+        <h2 class="section-title">体验指南 · 如何参与和浏览</h2>
+        <div class="guide-steps">
+          <div class="guide-step"><p><strong>浏览今日主题：</strong>页面首屏与“最新更新”板块会显示当日主题及要求，点击“查看今日主题”可直接定位。</p></div>
+          <div class="guide-step"><p><strong>按分类筛选：</strong>在“分类入口”中选择悬疑推理、都市情感等方向，快速找到你感兴趣的类型合集。</p></div>
+          <div class="guide-step"><p><strong>使用搜索查找：</strong>页头搜索框支持对主题名称、类型标签进行本地筛选，输入“密室”或“时间循环”即可过滤当前页内容。</p></div>
+          <div class="guide-step"><p><strong>阅读与评分：</strong>每篇作品下方设有评分与评论入口，读者可给出具体反馈，帮助作者改进。</p></div>
+          <div class="guide-step"><p><strong>收藏与追更：</strong>热门作品卡片支持收藏，收藏后可在个人中心查看更新动态。</p></div>
+          <div class="guide-step"><p><strong>移动端适配：</strong>手机访问时，频道导航转为横向标签，左右侧栏内容自动排列在主内容之后，阅读正文无需缩放。</p></div>
+        </div>
+      </section>
+
+      <!-- 板块7：FAQ -->
+      <section class="section" id="faq">
+        <h2 class="section-title">FAQ · 关于赛事与阅读的常见问题</h2>
+        <div class="faq-list">
+          <details>
+            <summary>每日主题大赛mrds适合什么类型的写作者参加？</summary>
+            <p>适合喜欢命题写作、需要外部节奏推动的短篇创作者。悬疑推理与都市情感方向的作者参与度最高，科幻与历史方向也有固定参赛群体。</p>
+          </details>
+          <details>
+            <summary>每日主题一般多久更新一次？</summary>
+            <p>每天上午九点更新一个主题，全年无休。往期主题保留在分类页中，可随时回看和练习。</p>
+          </details>
+          <details>
+            <summary>参赛作品有字数限制吗？</summary>
+            <p>建议在800至3000字之间。过短可能影响故事完整度，过长则可能超出读者在移动端的阅读耐心。</p>
+          </details>
+          <details>
+            <summary>悬疑推理和密室谜题有什么区别？</summary>
+            <p>悬疑推理范围更广，包含犯罪调查、心理悬疑等；密室谜题特指封闭空间内的逻辑解谜，通常有明确的物理边界和线索链。</p>
+          </details>
+          <details>
+            <summary>在哪可以看到往期精选作品？</summary>
+            <p>在“热门内容推荐”与“相关推荐”板块中，会按类型和热度展示往期高评分作品，点击卡片即可阅读。</p>
+          </details>
+          <details>
+            <summary>读者评分会影响作品排名吗？</summary>
+            <p>读者评分是精选筛选的参考之一，但编辑初筛更看重结构完整与主题契合。两者结合决定最终推荐位。</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- 板块8：用户评论 -->
+      <section class="section" id="comments">
+        <h2 class="section-title">用户评论 · 参赛者与读者的真实反馈</h2>
+        <div class="comment-list">
+          <div class="comment-item"><div class="name">夜航船</div><div class="text">密室谜题那期我写了三稿，最后发现线索给得太明显，读者一眼看穿。</div></div>
+          <div class="comment-item"><div class="name">南巷旧人</div><div class="text">都市情感分类里“巷口面馆”那篇看哭了，结尾一句没提悲伤，但后劲很大。</div></div>
+          <div class="comment-item"><div class="name">时间修补匠</div><div class="text">科幻设定的规则感很重要，我每次都会先列三条世界法则再动笔。</div></div>
+          <div class="comment-item"><div class="name">青灯说书</div><div class="text">历史方向查资料太耗时，但写出来确实比架空更有分量。</div></div>
+          <div class="comment-item"><div class="name">雾里看花</div><div class="text">每天九点等主题已经成了习惯，有时候光看题目就能脑补一个故事。</div></div>
+          <div class="comment-item"><div class="name">三号信使</div><div class="text">评分系统挺客观的，我的一篇冷门作品被编辑捞进精选，读者分后来才涨上来。</div></div>
+          <div class="comment-item"><div class="name">晚风急</div><div class="text">希望多出一些奇幻冒险的题目，最近几期悬疑有点密集。</div></div>
+          <div class="comment-item"><div class="name">镜中我</div><div class="text">“第二封辞职信”那题我写了两个版本，一个温情一个决绝，都提交了但只能算一篇。</div></div>
+          <div class="comment-item"><div class="name">旧巷猫</div><div class="text">手机上看短篇很舒服，排版不挤，一屏大概四五行字。</div></div>
+          <div class="comment-item"><div class="name">第七个读者</div><div class="text">评论区的反馈比分数有用，有人指出我时间线漏洞，改完顺畅多了。</div></div>
+          <div class="comment-item"><div class="name">孤岛来客</div><div class="text">灯塔守望者那期我写了日记体，结果发现好几篇都是日记体，撞车严重。</div></div>
+          <div class="comment-item"><div class="name">纸飞机</div><div class="text">希望增加一个“只看完结”的筛选，有些连载作品读到一半就停了。</div></div>
+        </div>
+      </section>
+
+      <!-- 板块9：相关资讯 -->
+      <section class="section" id="news">
+        <h2 class="section-title">相关资讯 · 赛事动态与类型观察</h2>
+        <div class="news-list">
+          <div class="news-item">
+            <div class="news-date">2025-04-09</div>
+            <div class="news-content"><h3>“悬疑推理·密室谜题”主题月即将开启</h3><p>连续四周的主题都将围绕封闭空间展开，参赛者需在命题内完成逻辑自洽的谜题设计。</p></div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">2025-04-07</div>
+            <div class="news-content"><h3>短篇叙事节奏工作坊开放报名</h3><p>面向参赛者的免费线上分享，聚焦前200字如何抓住读者，由往期精选作者主讲。</p></div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">2025-04-05</div>
+            <div class="news-content"><h3>都市情感类作品读者互动量上升</h3><p>近两周该分类的评论数增长明显，读者更倾向于对具体场景和对话细节展开讨论。</p></div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">2025-04-03</div>
+            <div class="news-content"><h3>平台优化移动端阅读体验</h3><p>正文行距与字号调整，手机端单屏显示字数更适中，长评论折叠机制同步上线。</p></div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">2025-04-01</div>
+            <div class="news-content"><h3>三月精选合集发布：12篇高评分作品</h3><p>涵盖悬疑、都市、科幻三个方向，合集按主题日期排列，方便按顺序阅读。</p></div>
+          </div>
+          <div class="news-item">
+            <div class="news-date">2025-03-29</div>
+            <div class="news-content"><h3>历史传奇方向新增“日常器物”命题思路</h3><p>鼓励作者从一件具体物品切入，避免大段背景铺陈，优秀作品将进入分类推荐位。</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 板块10：相关推荐 -->
+      <section class="section" id="related">
+        <h2 class="section-title">相关推荐 · 按具体方向查找</h2>
+        <div class="tag-cloud">
+          <a href="/#hot">密室杀人案</a>
+          <a href="/#hot">时间循环悖论</a>
+          <a href="/#hot">都市夜归人</a>
+          <a href="/#hot">历史战争家书</a>
+          <a href="/#hot">奇幻赌局设定</a>
+          <a href="/#hot">急诊室故事</a>
+          <a href="/#hot">平行世界规则</a>
+          <a href="/#hot">拆迁前的告别</a>
+        </div>
+      </section>
+
+      <!-- 板块11：趋势观察 + 创作者证言 -->
+      <section class="section" id="trend">
+        <h2 class="section-title">趋势观察 · 近三十天创作方向变化</h2>
+        <div class="deep-text" style="margin-bottom:24px;">
+          <p>从近三十天的参赛数据看，悬疑推理方向占比约34%，都市情感约28%，科幻设定约18%，历史传奇与奇幻冒险合计约20%。值得注意的趋势是：带有具体职业背景的设定（如灯塔守望者、急诊室医护、说书人）作品完成度普遍高于泛化背景作品。读者对“职业细节+个人困境”的组合反馈更积极。</p>
+          <p>另一个变化是，字数在1200至1800字之间的作品平均评分最高，过短（低于800字）的作品常因收尾仓促被扣分，过长（超过2500字）的作品在移动端完读率明显下降。参赛指南据此建议作者优先控制在1500字左右。</p>
+        </div>
+        <div class="quote-panel">
+          <div class="quote-text">“每日主题大赛mrds的命题让我养成了每天写一个完整短篇的习惯。悬疑题目逼着我把线索埋得合理，都市题目教会我用一个物件代替大段抒情。”</div>
+          <div class="quote-author">—— 往期精选作者 · 南巷旧人</div>
+        </div>
+      </section>
+
+      <!-- 搜索无结果提示 -->
+      <div class="no-result" id="noResult">没有找到相关内容，请尝试其他关键词。</div>
+
+    </main>
+
+    <!-- 右栏 -->
+    <aside class="right-sidebar">
+      <div class="sidebar-card">
+        <h3>页内目录</h3>
+        <ul class="toc-list">
+          <li><a href="/#intro">内容简介</a></li>
+          <li><a href="/#hot">热门内容推荐</a></li>
+          <li><a href="/#latest">最新更新</a></li>
+          <li><a href="/#category">分类入口</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#related">相关推荐</a></li>
+          <li><a href="/#trend">趋势观察</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <h3>热门条目</h3>
+        <ul class="hot-list">
+          <li><a href="/#hot">密室中的第二把钥匙</a><span class="badge">9.2</span></li>
+          <li><a href="/#hot">时间修复师的最后一次委托</a><span class="badge">9.0</span></li>
+          <li><a href="/#hot">末班地铁的乘客</a><span class="badge">8.7</span></li>
+          <li><a href="/#hot">将军的最后一封家书</a><span class="badge">8.8</span></li>
+          <li><a href="/#hot">旧照片背后的第三个人</a><span class="badge">8.5</span></li>
+        </ul>
+      </div>
+      <div class="sidebar-card">
+        <h3>延伸阅读</h3>
+        <ul class="toc-list">
+          <li><a href="/#deep">短篇叙事节奏分配</a></li>
+          <li><a href="/#deep">悬疑推理破题思路</a></li>
+          <li><a href="/#trend">近三十天类型占比</a></li>
+          <li><a href="/#news">悬疑推理主题月预告</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<!-- 页尾 -->
+<footer class="page-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-text">每日主题大赛mrds</div>
+        <p>每日一个创意命题，聚焦短篇叙事与类型写作。为创作者提供可参赛的选题方向，为读者提供按类型筛选的短篇阅读入口。</p>
+      </div>
+      <div class="footer-group">
+        <h4>赛事导航</h4>
+        <ul>
+          <li><a href="/#intro">内容简介</a></li>
+          <li><a href="/#hot">热门内容推荐</a></li>
+          <li><a href="/#latest">最新更新</a></li>
+          <li><a href="/#category">分类入口</a></li>
+        </ul>
+      </div>
+      <div class="footer-group">
+        <h4>阅读帮助</h4>
+        <ul>
+          <li><a href="/#guide">体验指南</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+          <li><a href="/#related">相关推荐</a></li>
+          <li><a href="/#trend">趋势观察</a></li>
+        </ul>
+      </div>
+      <div class="footer-group">
+        <h4>类型方向</h4>
+        <ul>
+          <li><a href="/#hot">悬疑推理</a></li>
+          <li><a href="/#hot">都市情感</a></li>
+          <li><a href="/#hot">科幻设定</a></li>
+          <li><a href="/#hot">历史传奇</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 每日主题大赛mrds · 内容展示页</span>
+      <span class="sample-note">部分内容为示例数据，仅用于展示页面结构</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    const searchInput = document.getElementById('searchInput');
+    const searchBtn = document.getElementById('searchBtn');
+    const noResult = document.getElementById('noResult');
+    const mainContent = document.querySelector('.main-content');
+    const allSections = mainContent.querySelectorAll('.section');
+
+    function performSearch() {
+      const keyword = searchInput.value.trim().toLowerCase();
+      if (!keyword) {
+        allSections.forEach(sec => sec.classList.remove('hidden-by-search'));
+        noResult.classList.remove('show');
+        return;
+      }
+
+      let hasVisible = false;
+      allSections.forEach(section => {
+        const text = section.innerText.toLowerCase();
+        if (text.includes(keyword)) {
+          section.classList.remove('hidden-by-search');
+          hasVisible = true;
+        } else {
+          section.classList.add('hidden-by-search');
+        }
+      });
+
+      if (hasVisible) {
+        noResult.classList.remove('show');
+      } else {
+        noResult.classList.add('show');
+      }
+    }
+
+    searchBtn.addEventListener('click', performSearch);
+    searchInput.addEventListener('keyup', function(e) {
+      if (e.key === 'Enter') performSearch();
+    });
+  })();
+</script>
+
+</body>
+  </html>

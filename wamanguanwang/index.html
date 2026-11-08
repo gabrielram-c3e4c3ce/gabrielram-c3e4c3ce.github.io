@@ -1,0 +1,1413 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>蛙漫官网网页-蛙漫漫画全集_蛙漫在线观看_蛙漫免费阅读</title>
+  <meta name="description" content="蛙漫官网网页提供蛙漫漫画全集在线观看与免费阅读。汇聚热血、恋爱、悬疑等类型，支持手机与电脑阅读，更新及时，适合漫画爱好者追更收藏。">
+  <meta name="keywords" content="蛙漫漫画全集,蛙漫在线观看,蛙漫免费阅读,热血漫画,恋爱漫画,悬疑漫画">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231e7d5d'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23fff' font-family='sans-serif'%3E蛙%3C/text%3E%3C/svg%3E">
+  <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+  <style>
+    :root {
+      --primary: #1e7d5d;
+      --primary-light: #e6f5ef;
+      --primary-dark: #155c43;
+      --accent: #f5a623;
+      --accent-light: #fef4e4;
+      --bg: #f6f8f7;
+      --surface: #ffffff;
+      --text: #1d2b28;
+      --text-secondary: #4a5f58;
+      --text-muted: #7a8f88;
+      --border: #dde5e2;
+      --radius: 10px;
+      --radius-sm: 6px;
+      --shadow: 0 1px 4px rgba(29,43,40,.06);
+      --shadow-md: 0 4px 16px rgba(29,43,40,.10);
+      --font: system-ui, -apple-system, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      --header-h: 112px;
+      --announce-h: 36px;
+      --anchor-offset: 160px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: var(--anchor-offset); }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { color: var(--primary-dark); text-decoration: underline; }
+    ul { list-style: none; }
+    img, svg { display: block; max-width: 100%; }
+    button { font-family: inherit; cursor: pointer; }
+    .container { max-width: 1320px; margin: 0 auto; padding: 0 20px; }
+
+    /* 吸顶公告条 + 页头 */
+    .sticky-wrap {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .announce-bar {
+      background: var(--primary-dark);
+      color: #d4f0e4;
+      font-size: 13px;
+      height: var(--announce-h);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .announce-bar .container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+    }
+    .announce-bar .tag {
+      background: var(--accent);
+      color: #3a2a00;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 1px 7px;
+      border-radius: 3px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .announce-bar p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .announce-bar a { color: #fff; text-decoration: underline; font-weight: 600; }
+
+    .site-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      height: 76px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      background: var(--primary);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 800;
+      font-size: 22px;
+      letter-spacing: -1px;
+    }
+    .brand-text {
+      font-size: 21px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      letter-spacing: .5px;
+      white-space: nowrap;
+    }
+    .header-nav {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+    .header-nav a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+      white-space: nowrap;
+      transition: background .15s, color .15s;
+    }
+    .header-nav a:hover {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      text-decoration: none;
+    }
+    .header-search {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .header-search input {
+      width: 180px;
+      padding: 7px 12px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-family: inherit;
+      background: var(--bg);
+      color: var(--text);
+      transition: border-color .15s, width .2s;
+    }
+    .header-search input:focus {
+      outline: 2px solid var(--primary);
+      outline-offset: 1px;
+      border-color: var(--primary);
+      width: 220px;
+    }
+    .header-search button {
+      padding: 7px 14px;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: 600;
+      transition: background .15s;
+    }
+    .header-search button:hover { background: var(--primary-dark); }
+
+    /* 首屏 */
+    .hero {
+      background: linear-gradient(135deg, #e6f5ef 0%, #f0faf6 40%, #fdf8ef 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 36px 0 32px;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 40px;
+      align-items: center;
+    }
+    .hero h1 {
+      font-size: 34px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      line-height: 1.3;
+      letter-spacing: .5px;
+    }
+    .hero-desc {
+      margin-top: 12px;
+      font-size: 15px;
+      color: var(--text-secondary);
+      max-width: 560px;
+      line-height: 1.75;
+    }
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+    .hero-badges span {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      padding: 4px 14px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+    .hero-badges span strong { color: var(--primary); }
+    .hero-cta {
+      display: flex;
+      gap: 12px;
+      margin-top: 22px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--primary);
+      color: #fff;
+      padding: 10px 24px;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-weight: 600;
+      transition: background .15s, transform .1s;
+    }
+    .btn-primary:hover { background: var(--primary-dark); color: #fff; text-decoration: none; }
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--surface);
+      color: var(--primary-dark);
+      border: 1.5px solid var(--primary);
+      padding: 10px 24px;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-weight: 600;
+      transition: background .15s;
+    }
+    .btn-outline:hover { background: var(--primary-light); text-decoration: none; }
+    .hero-visual {
+      background: var(--surface);
+      border-radius: 16px;
+      box-shadow: var(--shadow-md);
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .hero-visual .visual-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .visual-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 10px;
+      border-radius: var(--radius-sm);
+      background: var(--bg);
+      font-size: 13px;
+    }
+    .visual-row .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .visual-row .dot.g { background: #1e7d5d; }
+    .visual-row .dot.o { background: #f5a623; }
+    .visual-row .dot.b { background: #4a90d9; }
+    .visual-row .dot.p { background: #b06ab3; }
+    .visual-row span { flex: 1; }
+    .visual-row em {
+      font-style: normal;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    /* 三栏主布局 */
+    .main-layout {
+      display: grid;
+      grid-template-columns: 180px minmax(0,1fr) 250px;
+      gap: 24px;
+      padding: 28px 0 40px;
+      align-items: start;
+    }
+
+    /* 左栏 */
+    .left-rail { position: sticky; top: calc(var(--announce-h) + 76px + 16px); }
+    .left-rail .rail-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 14px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow);
+    }
+    .rail-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      margin-bottom: 10px;
+    }
+    .channel-nav a {
+      display: block;
+      padding: 7px 8px;
+      font-size: 14px;
+      color: var(--text-secondary);
+      border-radius: var(--radius-sm);
+      margin-bottom: 2px;
+      transition: background .12s, color .12s;
+    }
+    .channel-nav a:hover {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      text-decoration: none;
+    }
+    .channel-nav a .cn-badge {
+      float: right;
+      font-size: 11px;
+      background: var(--primary-light);
+      color: var(--primary);
+      padding: 0 6px;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .tag-cloud a {
+      font-size: 12px;
+      color: var(--text-secondary);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 3px 9px;
+      border-radius: 14px;
+      transition: background .12s, color .12s, border-color .12s;
+    }
+    .tag-cloud a:hover {
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      border-color: var(--primary);
+      text-decoration: none;
+    }
+
+    /* 中栏 */
+    .center-col { min-width: 0; }
+    .section-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px 26px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow);
+    }
+    .section-block h2 {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 6px;
+      letter-spacing: .3px;
+    }
+    .section-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .section-block h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin: 18px 0 8px;
+    }
+    .intro-text p {
+      margin-bottom: 10px;
+      color: var(--text-secondary);
+      font-size: 14.5px;
+      line-height: 1.8;
+    }
+    .intro-text p strong { color: var(--primary-dark); }
+
+    /* 卡片网格 */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 14px;
+    }
+    .content-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 14px;
+      transition: box-shadow .15s, transform .12s;
+    }
+    .content-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .content-card .card-type {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--primary);
+      background: var(--primary-light);
+      padding: 1px 8px;
+      border-radius: 4px;
+      margin-bottom: 6px;
+    }
+    .content-card .card-title {
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--text);
+      line-height: 1.4;
+      margin-bottom: 6px;
+    }
+    .content-card .card-desc {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+    .card-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    .card-meta span { white-space: nowrap; }
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-top: 8px;
+    }
+    .card-tags span {
+      font-size: 11px;
+      color: var(--text-secondary);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 1px 7px;
+      border-radius: 10px;
+    }
+
+    /* 动态列表 */
+    .update-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px dashed var(--border);
+    }
+    .update-list li:last-child { border-bottom: none; }
+    .update-list .ul-badge {
+      flex-shrink: 0;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent);
+      background: var(--accent-light);
+      padding: 2px 7px;
+      border-radius: 4px;
+      min-width: 42px;
+      text-align: center;
+      margin-top: 2px;
+    }
+    .update-list .ul-body { flex: 1; min-width: 0; }
+    .update-list .ul-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .update-list .ul-summary {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      margin-top: 2px;
+      line-height: 1.5;
+    }
+
+    /* 分类入口 */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+    .category-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      padding: 14px 8px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      text-align: center;
+      transition: background .12s, border-color .12s;
+    }
+    .category-item:hover {
+      background: var(--primary-light);
+      border-color: var(--primary);
+      text-decoration: none;
+    }
+    .category-item .cat-icon {
+      font-size: 20px;
+      line-height: 1;
+    }
+    .category-item .cat-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .category-item .cat-count {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    /* 深度解析 */
+    .deep-dive p {
+      font-size: 14.5px;
+      color: var(--text-secondary);
+      margin-bottom: 10px;
+      line-height: 1.8;
+    }
+    .deep-dive ul {
+      margin: 8px 0 12px 20px;
+      list-style: disc;
+    }
+    .deep-dive ul li {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 4px;
+      line-height: 1.7;
+    }
+
+    /* 体验指南 */
+    .guide-steps {
+      counter-reset: step;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .guide-step {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      counter-increment: step;
+    }
+    .guide-step::before {
+      content: counter(step);
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      background: var(--primary);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+    .guide-step .gs-body { flex: 1; }
+    .guide-step .gs-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+    .guide-step .gs-desc {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* FAQ */
+    .faq-list details {
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      margin-bottom: 8px;
+      background: var(--bg);
+      overflow: hidden;
+    }
+    .faq-list summary {
+      padding: 12px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after {
+      content: "+";
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--primary);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-list details[open] summary::after { content: "−"; }
+    .faq-list details[open] summary {
+      border-bottom: 1px solid var(--border);
+      background: var(--primary-light);
+    }
+    .faq-answer {
+      padding: 12px 16px;
+      font-size: 13.5px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      background: var(--surface);
+    }
+
+    /* 用户评论 */
+    .comment-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .comment-item {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+    }
+    .comment-head {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .comment-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      color: var(--primary-dark);
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .comment-nick {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .comment-text {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    /* 相关资讯 */
+    .news-list li {
+      padding: 10px 0;
+      border-bottom: 1px dashed var(--border);
+    }
+    .news-list li:last-child { border-bottom: none; }
+    .news-list .news-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .news-list .news-date {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin-left: 8px;
+      font-weight: 400;
+    }
+    .news-list .news-summary {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      margin-top: 2px;
+      line-height: 1.5;
+    }
+
+    /* 相关推荐 */
+    .rec-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .rec-tags a {
+      font-size: 13px;
+      color: var(--text-secondary);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: 20px;
+      transition: background .12s, border-color .12s, color .12s;
+    }
+    .rec-tags a:hover {
+      background: var(--primary-light);
+      border-color: var(--primary);
+      color: var(--primary-dark);
+      text-decoration: none;
+    }
+
+    /* 时间线/趋势 */
+    .timeline {
+      position: relative;
+      padding-left: 22px;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 7px;
+      top: 6px;
+      bottom: 6px;
+      width: 2px;
+      background: var(--border);
+    }
+    .timeline-item {
+      position: relative;
+      padding-bottom: 14px;
+    }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -19px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--primary);
+      border: 2px solid var(--surface);
+      box-shadow: 0 0 0 2px var(--primary-light);
+    }
+    .timeline-item .tl-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .timeline-item .tl-desc {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* 右栏 */
+    .right-rail { position: sticky; top: calc(var(--announce-h) + 76px + 16px); }
+    .right-rail .rail-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 14px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow);
+    }
+    .toc-list a {
+      display: block;
+      font-size: 13px;
+      color: var(--text-secondary);
+      padding: 4px 0 4px 12px;
+      border-left: 2px solid transparent;
+      transition: border-color .12s, color .12s;
+    }
+    .toc-list a:hover {
+      border-left-color: var(--primary);
+      color: var(--primary-dark);
+      text-decoration: none;
+    }
+    .hot-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      padding: 6px 0;
+      border-bottom: 1px dashed var(--border);
+    }
+    .hot-list li:last-child { border-bottom: none; }
+    .hot-list .hot-rank {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-muted);
+      min-width: 18px;
+    }
+    .hot-list .hot-rank.top { color: var(--accent); }
+    .hot-list .hot-name {
+      font-size: 13px;
+      color: var(--text);
+    }
+    .hot-list .hot-name:hover { color: var(--primary); }
+    .extend-links a {
+      display: block;
+      font-size: 13px;
+      color: var(--text-secondary);
+      padding: 4px 0;
+    }
+    .extend-links a:hover { color: var(--primary); }
+
+    /* 页尾 */
+    .site-footer {
+      background: #1d2b28;
+      color: #b8ccc4;
+      padding: 36px 0 24px;
+      margin-top: 8px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 28px;
+      margin-bottom: 28px;
+    }
+    .footer-brand .fb-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .footer-brand .fb-logo .brand-logo {
+      width: 34px; height: 34px; font-size: 18px; border-radius: 8px;
+    }
+    .footer-brand .fb-name {
+      font-size: 18px;
+      font-weight: 800;
+      color: #fff;
+    }
+    .footer-brand p {
+      font-size: 13px;
+      line-height: 1.7;
+      color: #8fa89f;
+      max-width: 280px;
+    }
+    .footer-col h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: .6px;
+    }
+    .footer-col a {
+      display: block;
+      font-size: 13px;
+      color: #8fa89f;
+      padding: 3px 0;
+    }
+    .footer-col a:hover { color: #fff; text-decoration: none; }
+    .footer-bottom {
+      border-top: 1px solid #2f4640;
+      padding-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 12px;
+      color: #6b857b;
+    }
+    .footer-bottom .disclaimer {
+      color: #6b857b;
+      font-size: 12px;
+    }
+
+    /* 搜索无结果 */
+    .no-result {
+      display: none;
+      padding: 14px;
+      background: var(--accent-light);
+      border: 1px solid var(--accent);
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      color: #7a5a00;
+      margin-top: 10px;
+    }
+    .no-result.show { display: block; }
+    .search-hidden { display: none !important; }
+
+    /* 响应式 */
+    @media (max-width: 1100px) {
+      .main-layout {
+        grid-template-columns: 1fr 240px;
+      }
+      .left-rail {
+        position: static;
+        grid-column: 1 / -1;
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+      .left-rail .rail-box {
+        flex: 1;
+        min-width: 200px;
+        margin-bottom: 0;
+      }
+    }
+    @media (max-width: 820px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .main-layout {
+        grid-template-columns: 1fr;
+      }
+      .right-rail {
+        position: static;
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+      .right-rail .rail-box {
+        flex: 1;
+        min-width: 220px;
+        margin-bottom: 0;
+      }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .category-grid { grid-template-columns: repeat(2, 1fr); }
+      .header-nav { display: none; }
+      .header-search input { width: 130px; }
+      .header-search input:focus { width: 160px; }
+      .comment-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 26px; }
+      .section-block { padding: 18px 16px; }
+      .brand-text { font-size: 17px; }
+      .header-inner { height: 64px; gap: 10px; }
+      .header-search input { width: 100px; }
+      .header-search button { padding: 7px 10px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .card-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- 吸顶公告条 + 页头 -->
+<div class="sticky-wrap">
+  <div class="announce-bar">
+    <div class="container">
+      <span class="tag">上新</span>
+      <p>蛙漫漫画本周新增《深海回响》《午后三点的约定》等 12 部作品，<a href="/#latest">查看更新列表</a></p>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="brand" aria-label="蛙漫官网网页首页">
+        <span class="brand-logo" aria-hidden="true">蛙</span>
+        <span class="brand-text">蛙漫官网网页</span>
+      </a>
+      <nav class="header-nav" aria-label="主题导航">
+        <a href="/#intro">简介</a>
+        <a href="/#hot">热门推荐</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#categories">分类</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">评论</a>
+      </nav>
+      <div class="header-search">
+        <input type="search" id="siteSearch" placeholder="搜索漫画…" aria-label="搜索站内内容">
+        <button type="button" id="searchBtn">搜索</button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<!-- 首屏 -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div>
+      <h1>蛙漫官网网页</h1>
+      <p class="hero-desc">汇集热血、恋爱、悬疑、日常治愈等漫画内容，提供在线观看与免费阅读入口。页面按类型整理作品，标注更新节奏与阅读场景，适合通勤追更、睡前放松或周末集中补番的漫画爱好者。</p>
+      <div class="hero-badges">
+        <span>收录作品 <strong>1200+</strong> 部</span>
+        <span>日更 <strong>30+</strong> 话</span>
+        <span>分类 <strong>8</strong> 大垂类</span>
+        <span>支持手机 / 电脑阅读</span>
+      </div>
+      <div class="hero-cta">
+        <a href="/#hot" class="btn-primary">浏览热门漫画</a>
+        <a href="/#latest" class="btn-outline">查看最新更新</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="visual-title">今日更新快照</div>
+      <div class="visual-row"><span class="dot g"></span><span>深海回响 · 第 44 话</span><em>悬疑</em></div>
+      <div class="visual-row"><span class="dot o"></span><span>午后三点的约定 · 第 18 话</span><em>恋爱</em></div>
+      <div class="visual-row"><span class="dot b"></span><span>星轨少年 · 第 72 话</span><em>热血</em></div>
+      <div class="visual-row"><span class="dot p"></span><span>猫町食堂 · 第 9 话</span><em>治愈</em></div>
+      <div class="visual-row"><span class="dot g"></span><span>雾都档案 · 第 31 话</span><em>推理</em></div>
+    </div>
+  </div>
+</section>
+
+<!-- 三栏主内容 -->
+<main class="container main-layout">
+
+  <!-- 左栏 -->
+  <aside class="left-rail" aria-label="频道与标签索引">
+    <div class="rail-box">
+      <div class="rail-title">频道导航</div>
+      <nav class="channel-nav" aria-label="左栏频道">
+        <a href="/#intro">内容简介</a>
+        <a href="/#hot">热门推荐 <span class="cn-badge">6</span></a>
+        <a href="/#latest">最新更新 <span class="cn-badge">10</span></a>
+        <a href="/#categories">分类入口</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">用户评论</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#recommend">相关推荐</a>
+        <a href="/#timeline">趋势时间线</a>
+      </nav>
+    </div>
+    <div class="rail-box">
+      <div class="rail-title">热门标签</div>
+      <div class="tag-cloud">
+        <a href="/#categories">热血漫画</a>
+        <a href="/#categories">恋爱漫画</a>
+        <a href="/#categories">悬疑推理</a>
+        <a href="/#categories">日常治愈</a>
+        <a href="/#categories">奇幻冒险</a>
+        <a href="/#categories">科幻未来</a>
+        <a href="/#categories">校园青春</a>
+        <a href="/#categories">古风权谋</a>
+        <a href="/#hot">通勤追更</a>
+        <a href="/#hot">睡前漫画</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 中栏 -->
+  <div class="center-col">
+
+    <!-- 1. 内容简介 -->
+    <section class="section-block" id="intro">
+      <h2>内容简介与平台定位</h2>
+      <p class="section-sub">了解蛙漫官网网页的内容方向与适合人群</p>
+      <div class="intro-text">
+        <p><strong>蛙漫官网网页</strong>是一个以漫画在线观看与免费阅读为核心的导航型门户页面。页面围绕“蛙漫漫画全集”这一核心内容，将热血、恋爱、悬疑、日常治愈等类型作品按垂类整理，帮助读者快速找到想看的漫画方向。无论你是在通勤路上刷几话短篇，还是周末集中补完一部长篇连载，都能通过分类入口和更新列表定位到合适的内容。</p>
+        <p>从搜索意图来看，来到这个页面的用户通常想找三类信息：一是具体漫画作品的阅读入口，二是某一类型漫画的集中推荐，三是判断某部作品是否适合自己、更新是否稳定。因此页面在内容组织上把“热门推荐”“最新更新”“分类入口”放在靠前位置，并在深度解析与 FAQ 中回答“蛙漫漫画适合什么人看”“连载一般多久更新”等实际问题。</p>
+        <p>蛙漫官网网页收录的作品以条漫与页漫为主，题材覆盖都市情感、校园青春、奇幻冒险、古风权谋、科幻未来等方向。每部作品标注类型标签、更新状态与简短看点，方便读者在浏览时快速判断是否合口味。对于喜欢追更的读者，最新更新板块按时间列出近期有更新的作品，减少反复翻找的成本。</p>
+        <p>页面同时提供体验指南与常见问题，说明阅读路径、筛选方式和移动端适配情况。对刚接触蛙漫漫画全集的读者，建议先浏览分类入口，再通过热门推荐了解当前讨论度较高的作品，最后用搜索框定向查找具体书名。整体内容以漫画阅读需求为中心，不涉及无关的下载或注册引导。</p>
+      </div>
+    </section>
+
+    <!-- 2. 热门内容推荐 -->
+    <section class="section-block" id="hot">
+      <h2>热门漫画推荐</h2>
+      <p class="section-sub">近期阅读量与讨论度较高的作品，按类型标注便于筛选</p>
+      <div class="card-grid">
+        <div class="content-card">
+          <span class="card-type">悬疑</span>
+          <div class="card-title">深海回响</div>
+          <p class="card-desc">海边小镇接连出现离奇失踪案，潜水员女主在海底发现刻满符号的青铜门。悬疑线与情感线双线推进。</p>
+          <div class="card-meta"><span>更新至 44 话</span><span>热度 9.2</span></div>
+          <div class="card-tags"><span>悬疑推理</span><span>都市传说</span><span>通勤追更</span></div>
+        </div>
+        <div class="content-card">
+          <span class="card-type">恋爱</span>
+          <div class="card-title">午后三点的约定</div>
+          <p class="card-desc">咖啡店常客与新人店员因一杯手冲结缘，两人在下午三点固定见面的约定背后藏着各自的过去。</p>
+          <div class="card-meta"><span>更新至 18 话</span><span>热度 8.7</span></div>
+          <div class="card-tags"><span>都市情感</span><span>治愈恋爱</span><span>睡前看</span></div>
+        </div>
+        <div class="content-card">
+          <span class="card-type">热血</span>
+          <div class="card-title">星轨少年</div>
+          <p class="card-desc">失去记忆的少年在废弃观测站唤醒星图系统，为寻找身世加入星际航行队，战斗与成长并重。</p>
+          <div class="card-meta"><span>更新至 72 话</span><span>热度 9.0</span></div>
+          <div class="card-tags"><span>热血漫画</span><span>科幻未来</span><span>长篇连载</span></div>
+        </div>
+        <div class="content-card">
+          <span class="card-type">治愈</span>
+          <div class="card-title">猫町食堂</div>
+          <p class="card-desc">只在深夜营业的小食堂，老板和一只会说话的猫为客人端上定制料理，每话一个温暖小故事。</p>
+          <div class="card-meta"><span>更新至 9 话</span><span>热度 8.4</span></div>
+          <div class="card-tags"><span>日常治愈</span><span>美食漫画</span><span>睡前放松</span></div>
+        </div>
+        <div class="content-card">
+          <span class="card-type">推理</span>
+          <div class="card-title">雾都档案</div>
+          <p class="card-desc">档案修复师通过旧卷宗还原悬案真相，每个案件独立成篇又暗线相连，适合喜欢本格推理的读者。</p>
+          <div class="card-meta"><span>更新至 31 话</span><span>热度 8.6</span></div>
+          <div class="card-tags"><span>悬疑推理</span><span>单元剧</span><span>完结可宰</span></div>
+        </div>
+        <div class="content-card">
+          <span class="card-type">古风</span>
+          <div class="card-title">长夜引</div>
+          <p class="card-desc">女官卷入朝堂权谋，与少年将军联手破局。古风权谋与群像刻画并重，节奏紧凑。</p>
+          <div class="card-meta"><span>更新至 56 话</span><span>热度 8.9</span></div>
+          <div class="card-tags"><span>古风权谋</span><span>强强联手</span><span>周末补番</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. 最新更新 -->
+    <section class="section-block" id="latest">
+      <h2>最新更新动态</h2>
+      <p class="section-sub">近 48 小时内更新的作品与一句话看点</p>
+      <ul class="update-list">
+        <li><span class="ul-badge">悬疑</span><div class="ul-body"><div class="ul-name">深海回响 · 第 44 话</div><div class="ul-summary">青铜门后的符号被破译出第一句，女主的身世线索浮出水面。</div></div></li>
+        <li><span class="ul-badge">恋爱</span><div class="ul-body"><div class="ul-name">午后三点的约定 · 第 18 话</div><div class="ul-summary">男主坦白留学计划，两人第一次认真讨论未来。</div></div></li>
+        <li><span class="ul-badge">热血</span><div class="ul-body"><div class="ul-name">星轨少年 · 第 72 话</div><div class="ul-summary">星图系统解锁第三形态，主角团迎来首次正面团战。</div></div></li>
+        <li><span class="ul-badge">治愈</span><div class="ul-body"><div class="ul-name">猫町食堂 · 第 9 话</div><div class="ul-summary">新客人带来一袋旧照片，老板做了一道与回忆有关的炖菜。</div></div></li>
+        <li><span class="ul-badge">推理</span><div class="ul-body"><div class="ul-name">雾都档案 · 第 31 话</div><div class="ul-summary">旧卷宗中的证物与近期案件出现相同标记，暗线开始收束。</div></div></li>
+        <li><span class="ul-badge">古风</span><div class="ul-body"><div class="ul-name">长夜引 · 第 56 话</div><div class="ul-summary">朝堂对峙升级，女官以退为进交出关键证据。</div></div></li>
+        <li><span class="ul-badge">奇幻</span><div class="ul-body"><div class="ul-name">雾海拾遗 · 第 23 话</div><div class="ul-summary">旅人进入会移动的岛屿，地图在手中不断重绘。</div></div></li>
+        <li><span class="ul-badge">校园</span><div class="ul-body"><div class="ul-name">第七节课后 · 第 14 话</div><div class="ul-summary">社团合宿名单公布，两位主角被分到同一组值日。</div></div></li>
+        <li><span class="ul-badge">科幻</span><div class="ul-body"><div class="ul-name">记忆快递 · 第 40 话</div><div class="ul-summary">快递员接到一单寄往十年前的包裹，收件人是自己。</div></div></li>
+        <li><span class="ul-badge">日常</span><div class="ul-body"><div class="ul-name">阳台种植日记 · 第 7 话</div><div class="ul-summary">番茄苗终于结果，邻居送来一包自制肥料。</div></div></li>
+      </ul>
+    </section>
+
+    <!-- 4. 分类入口 -->
+    <section class="section-block" id="categories">
+      <h2>漫画分类入口</h2>
+      <p class="section-sub">按题材与阅读场景划分的八个主要方向</p>
+      <div class="category-grid">
+        <a href="/#hot" class="category-item"><span class="cat-icon">🔥</span><span class="cat-name">热血漫画</span><span class="cat-count">186 部</span></a>
+        <a href="/#hot" class="category-item"><span class="cat-icon">💕</span><span class="cat-name">恋爱漫画</span><span class="cat-count">243 部</span></a>
+        <a href="/#hot" class="category-item"><span class="cat-icon">🔍</span><span class="cat-name">悬疑推理</span><span class="cat-count">132 部</span></a>
+        <a href="/#hot" class="category-item"><span class="cat-icon">🌿</span><span class="cat-name">日常治愈</span><span class="cat-count">97 部</span></a>
+        <a href="/#hot" class="category-item"><span class="cat-icon">⚔️</span><span class="cat-name">奇幻冒险</span><span class="cat-count">158 部</span></a>
+        <a href="/#hot" class="category-item"><span class="cat-icon">🚀</span><span class="cat-name">科幻未来</span><span class="cat-count">76 部</span></a>
+        <a href="/#hot" class="category-item"><span class="cat-icon">🎒</span><span class="cat-name">校园青春</span><span class="cat-count">115 部</span></a>
+        <a href="/#hot" class="category-item"><span class="cat-icon">🏮</span><span class="cat-name">古风权谋</span><span class="cat-count">68 部</span></a>
+      </div>
+    </section>
+
+    <!-- 5. 深度解析正文 -->
+    <section class="section-block deep-dive" id="deep">
+      <h2>深度解析：蛙漫漫画的类型选择与阅读节奏</h2>
+      <p class="section-sub">从类型差异、更新模式到选择依据的展开说明</p>
+
+      <h3>类型差异决定阅读场景</h3>
+      <p>蛙漫官网网页上的漫画大致可分为两类阅读节奏：强情节驱动与弱情节陪伴。悬疑推理、古风权谋、热血冒险属于前者，通常每话结尾留钩子，适合连续阅读；日常治愈、美食、校园小品属于后者，单话独立性强，适合碎片时间随手翻看。读者在选择时可以先判断自己当下需要“追下去”还是“松口气”，再进入对应分类。</p>
+      <p>以悬疑推理为例，这类作品在蛙漫漫画全集中往往标注“单元剧”或“主线连载”标签。单元剧型每话解决一个案件，适合通勤时看；主线连载型需要记住人物关系，更适合周末集中补。恋爱漫画则常见“慢热”与“直球”两种节奏，前者侧重氛围铺垫，后者推进较快，封面与简介中一般会给出提示。</p>
+
+      <h3>更新节奏与追更安排</h3>
+      <p>蛙漫官网网页的作品更新频率并不统一。热门长篇通常周更或双周更，中短篇可能日更或隔日更。页面在“最新更新”板块按时间列出近期有变动的作品，读者可以据此判断哪些作品正在活跃连载中。对于不想追更的读者，可以在卡片信息中留意“完结可宰”或“更新至 XX 话”的标注，优先选择已经积累一定话数的作品。</p>
+      <ul>
+        <li>日更作品：多为日常、搞笑、短篇合集，适合每天花几分钟阅读。</li>
+        <li>周更作品：恋爱、热血、奇幻类主流连载，单话信息量较大。</li>
+        <li>双周更 / 月更作品：长篇剧情向或画工精细的作品，适合攒几话再看。</li>
+      </ul>
+
+      <h3>筛选与比较时看什么</h3>
+      <p>如果在几部作品之间犹豫，可以按三个维度比较：第一是类型标签是否对味，第二是更新状态是否满足追更或补番需求，第三是简介中的“看点描述”是否击中你的兴趣点。蛙漫官网网页在每张推荐卡片上保留类型、更新进度和两到三个内容标签，目的就是让读者在进入阅读前完成快速筛选。对于悬疑类，可以优先看标签中是否含“本格”“单元剧”；对于恋爱类，可以看是否标注“治愈”“慢热”或“直球”。</p>
+      <p>另一个实用方法是利用页面搜索框。输入书名或类型关键词后，页面会过滤当前可见卡片并给出结果。如果搜索“悬疑”，深海回响与雾都档案会保留；搜索“治愈”，猫町食堂与午后三点的约定更匹配。这种方式适合已经知道自己想看什么方向的读者。</p>
+
+      <h3>移动端阅读与收藏习惯</h3>
+      <p>蛙漫漫画全集的页面在手机上会自动合并左右侧栏，频道导航转为顶部菜单，正文保持单列宽度，避免横向滚动。阅读时建议把常看的作品加入收藏或记下更新话数，下次进入页面直接看“最新更新”即可。对于通勤时间不固定的读者，短篇合集或单元剧型作品更容易随时开始和停下，长篇主线作品则适合安排固定时段集中阅读。</p>
+    </section>
+
+    <!-- 6. 体验指南 -->
+    <section class="section-block" id="guide">
+      <h2>阅读体验指南</h2>
+      <p class="section-sub">从进入页面到找到下一部想看的漫画</p>
+      <div class="guide-steps">
+        <div class="guide-step"><div class="gs-body"><div class="gs-title">先看首屏简介与热门推荐</div><div class="gs-desc">首屏概述了页面收录范围，热门推荐卡片提供近期讨论度较高的作品，适合没有明确目标的读者快速建立印象。</div></div></div>
+        <div class="guide-step"><div class="gs-body"><div class="gs-title">用分类入口缩小范围</div><div class="gs-desc">八个分类按题材划分，每个分类标注作品数量。点击后可在对应板块查看同类作品卡片。</div></div></div>
+        <div class="guide-step"><div class="gs-body"><div class="gs-title">通过最新更新判断追更价值</div><div class="gs-desc">更新列表按时间排列，附带一句话看点。频繁出现在列表中的作品通常处于活跃连载状态。</div></div></div>
+        <div class="guide-step"><div class="gs-body"><div class="gs-title">用搜索框定向查找</div><div class="gs-desc">顶部搜索框支持按书名或类型关键词过滤当前页面卡片，无结果时会给出提示。</div></div></div>
+        <div class="guide-step"><div class="gs-body"><div class="gs-title">参考评论与 FAQ 做决定</div><div class="gs-desc">用户评论提供不同读者的实际感受，FAQ 回答更新频率、适合人群等常见问题，帮助判断是否入坑。</div></div></div>
+      </div>
+    </section>
+
+    <!-- 7. FAQ -->
+    <section class="section-block" id="faq">
+      <h2>常见问题解答</h2>
+      <p class="section-sub">围绕蛙漫漫画阅读的高频疑问</p>
+      <div class="faq-list">
+        <details>
+          <summary>蛙漫漫画全集适合什么人看？</summary>
+          <div class="faq-answer">适合喜欢条漫与页漫的读者，尤其是通勤碎片时间阅读、睡前放松或周末集中补番的人群。页面按热血、恋爱、悬疑、治愈等类型划分，不同阅读偏好都能找到对应方向。如果偏好强情节推进，可优先看悬疑推理与古风权谋；如果只想轻松翻看，日常治愈与校园小品更合适。</div>
+        </details>
+        <details>
+          <summary>蛙漫官网网页上的漫画一般多久更新一次？</summary>
+          <div class="faq-answer">更新频率因作品而异。热门长篇通常周更或双周更，中短篇可能日更或隔日更，部分画工精细的作品为月更。页面“最新更新”板块会按时间列出近期有变动的作品，读者可以据此判断连载是否活跃。卡片上的“更新至 XX 话”也能帮助判断作品已积累的内容量。</div>
+        </details>
+        <details>
+          <summary>蛙漫在线观看需要注册或登录吗？</summary>
+          <div class="faq-answer">当前页面为内容导航与推荐展示页，阅读入口以链接形式提供。是否需要在目标阅读页注册或登录，取决于对应作品页面的设置。本页不强制注册，搜索、筛选和查看简介均可直接使用。</div>
+        </details>
+        <details>
+          <summary>悬疑推理类漫画和恋爱漫画怎么选？</summary>
+          <div class="faq-answer">如果更在意案件推进、线索反转和逻辑推理，优先看悬疑推理分类，标签中带“本格”“单元剧”的作品适合碎片阅读，带“主线连载”的作品适合连续追。如果更看重人物关系与情绪氛围，恋爱漫画中的“慢热”适合喜欢铺垫的读者，“直球”适合希望节奏更快的读者。两者并不冲突，可以按当天阅读状态切换。</div>
+        </details>
+        <details>
+          <summary>蛙漫漫画在手机上看排版会乱吗？</summary>
+          <div class="faq-answer">页面在手机宽度下会自动合并左右侧栏，频道导航转为顶部菜单，正文保持单列，卡片网格调整为单列或双列，避免横向滚动。阅读正文时每段控制在较短行数，适合竖屏浏览。搜索框在手机上收窄但保留功能。</div>
+        </details>
+        <details>
+          <summary>已经完结的蛙漫漫画在哪里找？</summary>
+          <div class="faq-answer">可以在卡片信息中留意“完结可宰”标签，或在最新更新列表中查看不再出现新话数的作品。分类入口中的悬疑推理与日常治愈板块完结作品相对较多。若使用搜索框，可尝试输入“完结”查看页面内相关卡片是否带有该标签。</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 8. 用户评论 -->
+    <section class="section-block" id="comments">
+      <h2>读者评论</h2>
+      <p class="section-sub">来自不同阅读偏好的真实感反馈</p>
+      <div class="comment-grid">
+        <div class="comment-item"><div class="comment-head"><span class="comment-avatar">阿</span><span class="comment-nick">阿蕨</span></div><p class="comment-text">深海回响的悬疑感很足，每话结尾都卡在关键处，通勤路上看两话刚好。</p></div>
+        <div class="comment-item"><div class="comment-head"><span class="comment-avatar">小</span><span class="comment-nick">小满</span></div><p class="comment-text">午后三点的约定画风舒服，节奏慢但不拖，适合睡前看。</p></div>
+        <div class="comment-item"><div class="comment-head"><span class="comment-avatar">星</span><span class="comment-nick">星野</span></div><p class="comment-text">星轨少年战斗分镜不错，就是周更等得有点急，攒几话再看更爽。</p></div>
+        <div class="comment-item"><div class="comment-head"><span class="comment-avatar">猫</span><span class="comment-nick">猫町常客</span></div><p class="comment-text">猫町食堂每一话都很短，但看完心情会变好，适合碎片时间。</p></div>
+        <div class="comment-item"><div class="comment-head"><span class="comment-avatar">雾</span><span class="comment-nick">雾都读者</span></div><p class="comment-text">雾都档案的单元案件质量稳定，主线暗扣也埋得可以，本格爱好者可入。</p></div>
+        <div class="comment-item"><div class="comment-head"><span class="comment-avatar">长</span><span class="comment-nick">长夜未明</span></div><p class="comment-text">古风权谋那部人物有点多，前几话需要记一下关系，后面越看越顺。</p></div>
+        <div class="comment-item"><div class="comment-head"><span class="comment-avatar">七</span><span class="comment-nick">第七节课</span></div><p class="comment-text">校园日常那部很轻松，值日分组那段很有代入感，推荐给喜欢小品的读者。</p></div>
+        <div class="comment-item"><div class="comment-head"><span class="comment-avatar">快</span><span class="comment-nick">快递小张</span></div><p class="comment-text">记忆快递的设定有意思，寄往十年前的包裹这个点子吸引我点进去。</p></div>
+        <div class="comment-item"><div class="comment-head"><span class="comment-avatar">阳</span><span class="comment-nick">阳台种菜</span></div><p class="comment-text">阳台种植日记更新有点慢，不过每话都很治愈，等得起。</p></div>
+        <div class="comment-item"><div class="comment-head"><span class="comment-avatar">木</span><span class="comment-nick">木木</span></div><p class="comment-text">蛙漫官网网页的分类做得比较清楚，找悬疑直接点分类就行，不用翻半天。</p></div>
+        <div class="comment-item"><div class="comment-head"><span class="comment-avatar">月</span><span class="comment-nick">月半</span></div><p class="comment-text">搜索功能挺实用，输入类型词能过滤卡片，希望以后能搜更多细节。</p></div>
+        <div class="comment-item"><div class="comment-head"><span class="comment-avatar">青</span><span class="comment-nick">青柠</span></div><p class="comment-text">恋爱漫画的标签如果能再细一点就好了，比如慢热和直球分开标。</p></div>
+        <div class="comment-item"><div class="comment-head"><span class="comment-avatar">阿</span><span class="comment-nick">阿茶</span></div><p class="comment-text">最新更新列表是我最常用的，每天扫一眼就知道有没有新话。</p></div>
+        <div class="comment-item"><div class="comment-head"><span class="comment-avatar">路</span><span class="comment-nick">路人甲</span></div><p class="comment-text">整体页面浏览下来不卡，手机上看也不乱，这点好评。</p></div>
+        <div class="comment-item"><div class="comment-head"><span class="comment-avatar">深</span><span class="comment-nick">深海鱼</span></div><p class="comment-text">深海回响的青铜门设定希望后面能圆回来，目前追得很有动力。</p></div>
+        <div class="comment-item"><div class="comment-head"><span class="comment-avatar">番</span><span class="comment-nick">番薯</span></div><p class="comment-text">古风那部权谋线有点绕，但人物立得住，喜欢群像的可以试试。</p></div>
+      </div>
+    </section>
+
+    <!-- 9. 相关资讯 -->
+    <section class="section-block" id="news">
+      <h2>相关资讯</h2>
+      <p class="section-sub">漫画类型趋势与阅读话题</p>
+      <ul class="news-list">
+        <li><div class="news-title">悬疑推理漫画近期讨论度上升，单元剧形式受通勤读者欢迎<span class="news-date">2025-03-18</span></div><div class="news-summary">多个平台数据显示，短篇单元结构的悬疑漫画在碎片阅读场景中留存更高。</div></li>
+        <li><div class="news-title">恋爱漫画“慢热”与“直球”两大节奏并行，读者按状态切换<span class="news-date">2025-03-15</span></div><div class="news-summary">同一类型下不同节奏的作品覆盖了不同阅读时段，睡前与通勤偏好差异明显。</div></li>
+        <li><div class="news-title">日常治愈类漫画在移动端阅读占比提升<span class="news-date">2025-03-12</span></div><div class="news-summary">短小独立的故事结构更适合手机竖屏浏览，单话完成度成为选择因素。</div></li>
+        <li><div class="news-title">古风权谋漫画人物关系图需求增加，读者倾向先看简介再入坑<span class="news-date">2025-03-08</span></div><div class="news-summary">群像作品的前几话理解成本较高，带人物标注的简介更受关注。</div></li>
+        <li><div class="news-title">科幻漫画“记忆快递”类设定受关注，短篇科幻有回升迹象<span class="news-date">2025-03-05</span></div><div class="news-summary">高概念短篇在移动端传播效率较高，读者对一话一个点子的形式接受度提升。</div></li>
+        <li><div class="news-title">校园青春漫画合宿与社团题材回温，轻松日常线受青睐<span class="news-date">2025-03-02</span></div><div class="news-summary">无强冲突的校园小品在周末阅读时段表现稳定，适合连续轻阅读。</div></li>
+      </ul>
+    </section>
+
+    <!-- 10. 相关推荐 -->
+    <section class="section-block" id="recommend">
+      <h2>相关推荐与延伸方向</h2>
+      <p class="section-sub">按内容方向与阅读需求整理的可搜索标签</p>
+      <div class="rec-tags">
+        <a href="/#hot">悬疑单元剧推荐</a>
+        <a href="/#hot">慢热恋爱漫画</a>
+        <a href="/#hot">热血长篇连载</a>
+        <a href="/#hot">睡前治愈短篇</a>
+        <a href="/#hot">古风权谋群像</a>
+        <a href="/#hot">科幻高概念短篇</a>
+        <a href="/#hot">校园轻松日常</a>
+        <a href="/#hot">完结可宰作品</a>
+        <a href="/#latest">通勤追更列表</a>
+        <a href="/#latest">周末补番方向</a>
+      </div>
+    </section>
+
+    <!-- 11. 趋势时间线 -->
+    <section class="section-block" id="timeline">
+      <h2>近期内容趋势时间线</h2>
+      <p class="section-sub">从阅读偏好变化看类型走向</p>
+      <div class="timeline">
+        <div class="timeline-item"><div class="tl-title">3 月上旬：悬疑单元剧关注度上升</div><div class="tl-desc">短篇案件结构在通勤场景中阅读完成率更高，读者更倾向每话有明确收束的作品。</div></div>
+        <div class="timeline-item"><div class="tl-title">3 月中旬：治愈系短篇需求稳定</div><div class="tl-desc">日常与美食题材在睡前时段表现突出，单话独立、情绪温和的作品更受欢迎。</div></div>
+        <div class="timeline-item"><div class="tl-title">3 月下旬：长篇连载进入补番窗口</div><div class="tl-desc">部分周更作品积累了一定话数，周末集中阅读的用户开始回到长篇主线。</div></div>
+        <div class="timeline-item"><div class="tl-title">4 月初：古风与科幻并行</div><div class="tl-desc">古风权谋的群像讨论与科幻短篇的高概念设定同时吸引不同阅读圈层。</div></div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- 右栏 -->
+  <aside class="right-rail" aria-label="辅助阅读">
+    <div class="rail-box">
+      <div class="rail-title">页内目录</div>
+      <nav class="toc-list" aria-label="页内目录">
+        <a href="/#intro">内容简介</a>
+        <a href="/#hot">热门推荐</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#categories">分类入口</a>
+        <a href="/#deep">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#comments">用户评论</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#recommend">相关推荐</a>
+        <a href="/#timeline">趋势时间线</a>
+      </nav>
+    </div>
+    <div class="rail-box">
+      <div class="rail-title">热门条目</div>
+      <ul class="hot-list">
+        <li><span class="hot-rank top">1</span><a href="/#hot" class="hot-name">深海回响</a></li>
+        <li><span class="hot-rank top">2</span><a href="/#hot" class="hot-name">星轨少年</a></li>
+        <li><span class="hot-rank top">3</span><a href="/#hot" class="hot-name">长夜引</a></li>
+        <li><span class="hot-rank">4</span><a href="/#hot" class="hot-name">午后三点的约定</a></li>
+        <li><span class="hot-rank">5</span><a href="/#hot" class="hot-name">雾都档案</a></li>
+        <li><span class="hot-rank">6</span><a href="/#hot" class="hot-name">猫町食堂</a></li>
+      </ul>
+    </div>
+    <div class="rail-box">
+      <div class="rail-title">延伸阅读</div>
+      <div class="extend-links">
+        <a href="/#deep">悬疑漫画的线索排布</a>
+        <a href="/#deep">恋爱漫画节奏怎么选</a>
+        <a href="/#latest">本周更新作品一览</a>
+        <a href="/#faq">完结作品查找方式</a>
+        <a href="/#guide">移动端阅读建议</a>
+      </div>
+    </div>
+  </aside>
+
+</main>
+
+<!-- 页尾 -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="fb-logo">
+          <span class="brand-logo" aria-hidden="true">蛙</span>
+          <span class="fb-name">蛙漫官网网页</span>
+        </div>
+        <p>漫画在线观看与免费阅读门户，按热血、恋爱、悬疑、治愈等类型整理作品，提供更新动态与选择参考。</p>
+      </div>
+      <div class="footer-col">
+        <h4>内容频道</h4>
+        <a href="/#hot">热门推荐</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#categories">分类入口</a>
+        <a href="/#deep">深度解析</a>
+      </div>
+      <div class="footer-col">
+        <h4>阅读帮助</h4>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问题</a>
+        <a href="/#news">相关资讯</a>
+        <a href="/#recommend">相关推荐</a>
+      </div>
+      <div class="footer-col">
+        <h4>读者入口</h4>
+        <a href="/#comments">用户评论</a>
+        <a href="/#timeline">趋势时间线</a>
+        <a href="/#intro">内容简介</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 蛙漫官网网页 · 内容导航示例</span>
+      <span class="disclaimer">部分内容为示例数据，仅用于展示页面结构</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var searchInput = document.getElementById('siteSearch');
+    var searchBtn = document.getElementById('searchBtn');
+    var cards = document.querySelectorAll('.content-card, .update-list li, .comment-item');
+    var noResult = document.createElement('div');
+    noResult.className = 'no-result';
+    noResult.textContent = '没有找到匹配的内容，请尝试其他关键词。';
+    var centerCol = document.querySelector('.center-col');
+    if (centerCol) centerCol.prepend(noResult);
+
+    function doSearch() {
+      var q = searchInput.value.trim().toLowerCase();
+      var hasVisible = false;
+      if (!q) {
+        cards.forEach(function(el){ el.classList.remove('search-hidden'); });
+        noResult.classList.remove('show');
+        return;
+      }
+      cards.forEach(function(el){
+        var text = el.textContent.toLowerCase();
+        if (text.indexOf(q) > -1) {
+          el.classList.remove('search-hidden');
+          hasVisible = true;
+        } else {
+          el.classList.add('search-hidden');
+        }
+      });
+      if (!hasVisible) {
+        noResult.classList.add('show');
+      } else {
+        noResult.classList.remove('show');
+      }
+    }
+
+    searchBtn.addEventListener('click', doSearch);
+    searchInput.addEventListener('input', doSearch);
+    searchInput.addEventListener('keydown', function(e){
+      if (e.key === 'Enter') { e.preventDefault(); doSearch(); }
+    });
+  })();
+</script>
+
+</body>
+            </html>
